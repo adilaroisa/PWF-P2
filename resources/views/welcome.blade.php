@@ -17,7 +17,7 @@
     </head>
     <body class="bg-[#0a0a0a] text-white flex flex-col min-h-screen antialiased">
         
-        <header class="w-full p-6 text-sm flex justify-end">
+        <header class="relative z-10 w-full p-6 text-sm flex justify-end">
             @if (Route::has('login'))
                 <nav class="flex items-center gap-4">
                     @auth
