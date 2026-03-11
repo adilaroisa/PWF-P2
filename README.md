@@ -10,19 +10,21 @@
 
 # Pertemuan 3
 
-| ERD | Database |
-|-----|----------|
-| ![](ss/praktikum3/ERD.png) | ![](ss/praktikum3/database.png) |
+| Model Kategori | Model Product |
+|------------|---------------|
+| ![](ss/praktikum3/modelsKategori-1.png)  | ![](ss/praktikum3/modelsProduct-1.png) | 
+| ![](ss/praktikum3/modelsKategori-2.png)  | ![](ss/praktikum3/modelsProduct-2.png) |
 
-| Model User | Model Product |
-|------------|--------------|
-| ![](ss/praktikum3/modelsUser-1.png) | ![](ss/praktikum3/migrationProduct.png) |
+| Model User |
+|----------------|
+| ![](ss/praktikum3/modelsUser-1.png) | 
 
-| Model Kategori | Migration User |
-|---------------|---------------|
-| ![](ss/praktikum3/modelsKategori.png) | ![](ss/praktikum3/migrationUser-1.png) |
+## Migrations
 
-| Migration Product | Migration Kategori |
-|------------------|--------------------|
-| ![](ss/praktikum3/migrationProduct-1.png) | ![](ss/praktikum3/migrationKategori-1.png) |
-| ![](ss/praktikum3/migrationProduct-2.png) | ![](ss/praktikum3/migrationKategori-2.png) |
+| Migration Kategori | Migration Product |
+|----------------|------------------|
+| ![](ss/praktikum3/migrationKategori.png) | ![](ss/praktikum3/migrationProduct.png) |
+
+| Migration User | Migration User |
+|----------------|----------------|
+| ![](ss/praktikum3/migrationUser-1.png) | ![](ss/praktikum3/migrationUser-2.png) |
