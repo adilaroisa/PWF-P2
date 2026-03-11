@@ -19,8 +19,6 @@
 |----------------|
 | ![](ss/praktikum3/modelsUser-1.png) | 
 
-## Migrations
-
 | Migration Kategori | Migration Product |
 |----------------|------------------|
 | ![](ss/praktikum3/migrationKategori.png) | ![](ss/praktikum3/migrationProduct.png) |
