@@ -24,4 +24,5 @@
 
 | Migration Product | Migration Kategori |
 |------------------|--------------------|
-| ![](ss/praktikum3/migrationProduct.png) | ![](ss/praktikum3/migrationKategori.png) |
+| ![](ss/praktikum3/migrationProduct-1.png) | ![](ss/praktikum3/migrationKategori-1.png) |
+| ![](ss/praktikum3/migrationProduct-2.png) | ![](ss/praktikum3/migrationKategori-2.png) |
