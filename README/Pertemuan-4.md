@@ -19,3 +19,7 @@
 ## Read Product
 ![](../ss/praktikum4/Read-1.png)
 ![](../ss/praktikum4/Read-2.png)
+
+## Database
+![](../ss/praktikum4/Database-1.png)
+![](../ss/praktikum4/Database-2.png)

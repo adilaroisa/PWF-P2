@@ -8,4 +8,4 @@
 [Dokumentasi Pertemuan 3](README/Pertemuan-3.md)
 
 ## Pertemuan 4
-[Dokumentasi Pertemuan 3](README/Pertemuan-4.md)
+[Dokumentasi Pertemuan 4](README/Pertemuan-4.md)
