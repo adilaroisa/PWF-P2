@@ -75,4 +75,9 @@ class ProductController extends Controller
 
         return redirect()->route('product.index')->with('success', 'Product berhasil dihapus');
     }
+
+    public function export()
+    {
+        return "Berhasil! Ini adalah halaman Export. Jika Anda bisa melihat tulisan ini, berarti Anda adalah Admin dan Gate 'export-product' berfungsi dengan sempurna!";
+    }
 }

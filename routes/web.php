@@ -23,13 +23,16 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     // Product Page
-    Route::get('/product', [ProductController::class, 'index'])->name('product.index');
-    Route::post('/product', [ProductController::class, 'store'])->name('product.store');
-    Route::get('/product/create', [ProductController::class, 'create'])->name('product.create');
-    Route::get('/product/{id}', [ProductController::class, 'show'])->name('product.show');
-    Route::put('/product/update/{id}', [ProductController::class, 'update'])->name('product.update');
-    Route::get('/product/edit/{product}', [ProductController::class, 'edit'])->name('product.edit');
-    Route::delete('/product/delete/{id}', [ProductController::class, 'delete'])->name('product.delete');
+    Route::controller(ProductController::class)->prefix('product')->name('product.')->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::post('/', 'store')->name('store');
+        Route::get('/create', 'create')->name('create');
+        Route::get('/export', 'export')->name('export')->middleware('can:export-product');
+        Route::get('/{id}', 'show')->name('show');
+        Route::get('/edit/{product}', 'edit')->name('edit');
+        Route::put('/update/{id}', 'update')->name('update');
+        Route::delete('/delete/{id}', 'delete')->name('delete');
+    });
 });
 
 

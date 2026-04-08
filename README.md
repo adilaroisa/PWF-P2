@@ -9,3 +9,6 @@
 
 ## Pertemuan 4
 [Dokumentasi Pertemuan 4](README/Pertemuan-4.md)
+
+## Pertemuan 5
+[Dokumentasi Pertemuan 5](README/Pertemuan-5.md)
