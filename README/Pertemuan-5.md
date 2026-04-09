@@ -3,8 +3,8 @@
 ## Tampilan Halaman Admin 
 ![](../ss/praktikum5/HalamanAdmin.png)
 
-## Tampilan Halaman Export Admin dengan data dummy 
-![](../ss/praktikum5/HalamanAdminExport.png)
+## Tampilan Export Saat Admin klik
+![](../ss/praktikum5/AdminExport.png)
 
 ## Tampilan Halaman User
 ![](../ss/praktikum5/HalamanUser.png)

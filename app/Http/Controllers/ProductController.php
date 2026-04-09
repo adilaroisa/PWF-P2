@@ -78,6 +78,37 @@ class ProductController extends Controller
 
     public function export()
     {
-        return "Berhasil! Ini adalah halaman Export. Jika Anda bisa melihat tulisan ini, berarti Anda adalah Admin dan Gate 'export-product' berfungsi dengan sempurna!";
+        $fileName = 'data_produk_' . date('Y-m-d_H-i-s') . '.csv';
+
+        $products = Product::with('user')->get();
+
+        $headers = [
+            "Content-type"        => "text/csv",
+            "Content-Disposition" => "attachment; filename=$fileName",
+            "Pragma"              => "no-cache",
+            "Cache-Control"       => "must-revalidate, post-check=0, pre-check=0",
+            "Expires"             => "0"
+        ];
+
+        $callback = function () use ($products) {
+            $file = fopen('php://output', 'w');
+            
+            fputcsv($file, ['No', 'Nama Produk', 'Kuantitas', 'Harga', 'Pemilik']);
+
+            $rowNumber = 1;
+            foreach ($products as $product) {
+                fputcsv($file, [
+                    $rowNumber++,
+                    $product->name,
+                    $product->qty,
+                    $product->price,
+                    $product->user ? $product->user->name : '-'
+                ]);
+            }
+
+            fclose($file);
+        };
+
+        return response()->stream($callback, 200, $headers);
     }
 }
