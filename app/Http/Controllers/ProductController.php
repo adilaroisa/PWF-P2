@@ -5,25 +5,21 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreProductRequest;
+use App\Http\Requests\UpdateProductRequest;
 
 class ProductController extends Controller
 {
     public function index()
     {
-        // PERBAIKAN: Diganti jadi paginate(10) agar tidak error saat dipanggil oleh hasPages() di index.blade.php
         $products = Product::paginate(10);
         
         return view('product.index', compact('products'));
     }
 
-    public function store(Request $request)
+    public function store(StoreProductRequest $request)
     {
-        $validated = $request->validate([
-            'name' => 'required|string|max:255',
-            'qty' => 'required|integer', // PERBAIKAN: quantity disesuaikan jadi qty
-            'price' => 'required|numeric',
-            'user_id' => 'required|exists:users,id',
-        ]);
+        $validated = $request->validated();
 
         $product = Product::create($validated);
 
@@ -44,16 +40,11 @@ class ProductController extends Controller
         return view('product.view', compact('product'));
     }
 
-    public function update(Request $request, $id)
+    public function update(UpdateProductRequest $request, $id)
     {
         $product = Product::findOrFail($id);
         
-        $validated = $request->validate([
-            'name' => 'sometimes|string|max:255',
-            'qty' => 'sometimes|integer', // PERBAIKAN: quantity disesuaikan jadi qty
-            'price' => 'sometimes|numeric',
-            'user_id' => 'sometimes|exists:users,id',
-        ]);
+        $validated = $request->validated();
 
         $product->update($validated);
 
