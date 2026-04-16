@@ -29,7 +29,7 @@ class ProductPolicy
      */
     public function create(User $user): bool
     {
-        return true;
+        return $user->isAdmin();
     }
 
     /**
@@ -37,7 +37,19 @@ class ProductPolicy
      */
     public function update(User $user, Product $product): bool
     {
-        return $user->isAdmin() || $user->id === $product->user_id;
+        if (!$user->isAdmin()) {
+            return false;
+        }
+
+        if ($user->id === $product->user_id) {
+            return true;
+        }
+
+        if ($product->user && $product->user->isAdmin()) {
+            return false;
+        }
+
+        return true;
     }
 
     /**
@@ -45,7 +57,19 @@ class ProductPolicy
      */
     public function delete(User $user, Product $product): bool
     {
-        return $user->isAdmin() || $user->id === $product->user_id;
+        if (!$user->isAdmin()) {
+            return false;
+        }
+
+        if ($user->id === $product->user_id) {
+            return true;
+        }
+
+        if ($product->user && $product->user->isAdmin()) {
+            return false;
+        }
+
+        return true;
     }
 
     /**

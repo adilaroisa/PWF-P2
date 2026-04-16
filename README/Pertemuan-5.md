@@ -1,7 +1,8 @@
 # Pertemuan 5
 
 ## Tampilan Halaman Admin 
-![](../ss/praktikum5/HalamanAdmin.png)
+![](../ss/praktikum5/HalamanAdmin1.png)
+![](../ss/praktikum5/HalamanAdmin2.png)
 
 ## Tampilan Export Saat Admin klik
 ![](../ss/praktikum5/AdminExport.png)
