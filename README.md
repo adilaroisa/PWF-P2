@@ -15,3 +15,6 @@
 
 ## Pertemuan 6
 [Dokumentasi Pertemuan 6](README/Pertemuan-6.md)
+
+## Pertemuan 7
+[Dokumentasi Pertemuan 7](README/Pertemuan-7.md)
